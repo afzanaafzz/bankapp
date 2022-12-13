@@ -1,0 +1,29 @@
+<form (ngSubmit)="register()" [formGroup]="registerForm">
+    <div class="container w-50 text-center border  rounded bg-light mt-4 p-4">
+
+        <h3 class="text-center " style="font-family: sans-serif;">REGISTRATION</h3>
+        <input type="text" name="uname" formControlName="acno" class="form-control mt-4" id="acno"
+            placeholder="Enter acno">
+        <div class="text-danger text-start"
+            *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched">
+            <p>Enter Valid AccountNumber</p>
+
+        </div>
+        <input type="text" name="acno" formControlName="uname" class="form-control mt-4" id="usern"
+            placeholder="Enter Username">
+        <div class="text-danger text-start"
+            *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched">
+            <p>Enter Valid Username</p>
+
+        </div>
+        <input type="password" name="psw" formControlName="psw" class="form-control mt-4" id="password"
+            placeholder="Enter password">
+        <div class="text-danger  text-start"
+            *ngIf="this.registerForm.get('psw')?.errors && this.registerForm.get('psw')?.touched">
+            <p>Enter Valid password</p>
+
+        </div>
+        <button type="submit" class="btn btn-primary mt-3 mb-3">REGISTER</button>
+
+    </div>
+</form>

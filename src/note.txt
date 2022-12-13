@@ -1,0 +1,101 @@
+data binding in angular
+-----------------------
+
+
+ts file-component
+html file-view
+
+1-one way binding
+    1.1-component to view
+
+        1.1.1-string interpollation {{}}
+        1.1.2-property binding     [property]="value"
+
+
+    1.2-view to component
+
+        1.2.1-event binding     (eventname)="method name()"
+        1.2.2-event binding using $ event   (eventname)="methodname($event)"  //in html//  (change)="pswChange($event)",(change)="acnoChange($event)"
+        1.2.3-evnt binding using template rendering variable   #variable
+
+2.Two way binding
+
+    2.1-ngmodel     [(ngmodel)]="value"
+                    FormsModule
+
+
+REDIRECTION in angular
+=======================
+
+navigateByUrl   -method to REDIRECTION
+Router -class
+AppRoutingModule -module
+
+dependancy injection
+--------------------
+-to use a method of class in another class
+-in contsructor
+-steps          access specifier -public/private
+                variable
+                class name
+                 private var:Classname
+
+
+Angular services
+----------------
+
+ng g s servicename
+
+
+
+
+Angular Directives
+------------------
+
+1-structural Directives-to handle sturctured data in view  (html)
+
+    -ngFor -    can directly apply in html to access elements from array
+    -ngIf -     to apply if in html
+
+    
+Form Validation in Angular
+---------------------------
+we can create forms in 2 ways
+
+    1.Template Driven Form
+
+    2.Model Driven Form
+
+        -Reactive forms
+        ----------------
+
+        ReactiveFormModule - Module used to create model form
+        FormBuilder -class of ReactiveFormModule
+                    group,array,control
+
+
+Validte Model Form
+-------------------
+
+Validator - a class in angular it includes methods for apply validation
+
+access errors in validator rule 
+
+        eg:this.registerForm.get('uname')?.errors
+
+        //.error is used to take output of it like how .then is used
+
+
+
+                    -valid  -empty response
+
+                    -invalid -Content
+
+                    
+
+
+      Local storage in angular
+ ---------------------------------     
+    store- localstorage.setItem()
+    access-localstorage.getItem()
+    delete-localstorage.removeItem()           

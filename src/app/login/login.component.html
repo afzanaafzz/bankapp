@@ -1,0 +1,34 @@
+<div>
+    <h1 class="text-center text-white p-3" style="font-family:sans-serif ;">{{aim}}</h1>
+</div>
+<form (ngSubmit)="login()" [formGroup]="loginForm">
+
+    <div class="container text-center  rounded  mt-4 p-4">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-8 col-lg-6 col-xl-4">
+
+
+                <h3 class="text-center " style="font-family: sans-serif; ">LOGIN</h3>
+                <input type="text" formControlName="acno" name="acno" class="form-control mt-4" [placeholder]="placehld"
+                    id="acid">
+                <div class="text-danger text-start"
+                    *ngIf="this.loginForm.get('acno')?.errors && this.loginForm.get('acno')?.touched">
+                    <p>Enter Valid AccountNumber</p>
+
+                </div>
+
+                <input type="password" formControlName="psw" name="psw" class="form-control mt-4"
+                    placeholder="Enter password" id="pid">
+                <div class="text-danger  text-start"
+                    *ngIf="this.loginForm.get('psw')?.errors && this.loginForm.get('psw')?.touched">
+                    <p>Enter Valid password</p>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary mt-3 mb-3"> LOGIN</button><br>
+
+                <a style="text-decoration: none;" routerLink="register"> Register Here</a>
+            </div>
+        </div>
+    </div>
+</form>
