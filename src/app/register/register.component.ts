@@ -29,7 +29,7 @@ export class RegisterComponent {
     var psw = this.registerForm.value.psw
 
     if (this.registerForm.valid) {
-      const result = this.ds.register(uname, acno, psw)
+      const result = this.ds.register(acno, uname, psw)
       if (result) {
         alert('success')
         this.router.navigateByUrl('')

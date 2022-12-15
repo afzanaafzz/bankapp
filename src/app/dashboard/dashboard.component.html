@@ -1,4 +1,5 @@
-<h3 class="text-center text-uppercase " style="color:blue ;">WELCOME <span>{{user}}</span></h3>
+<h2 class="text-center text-uppercase " style="color:grey;">welcome <span>{{user}}</span></h2>
+<h4 class="text-center text-uppercase " style="color:black ;">{{dateandtime |date :'short'}}</h4>
 <div> 
     <a routerLink="/transaction" class="text-center text-uppercase p-3"
         style="background-color: grey; text-decoration: none; border-radius: 25px;color: white;">TRANSACTION HISTORY</a>
@@ -9,7 +10,7 @@
 
 
 
-<form (ngSubmit)="deposit()" [formGroup]="depositForm">
+<form [ngClass]="acno?'style':''" (ngSubmit)="deposit()" [formGroup]="depositForm">
 
     <div class="container w-25 bg-light border rounded text-center p-2 mt-1 mb-2">
         <h3>DEPOSIT</h3>
@@ -22,8 +23,9 @@
     </div>
 </form>
 
+<app-deleteconfirm [item]="acno"></app-deleteconfirm>
 
-<form (ngSubmit)="withdraw()" [formGroup]="withdrawForm">
+<form [ngClass]="acno?'style':''"  (ngSubmit)="withdraw()" [formGroup]="withdrawForm">
     <div class="container w-25 bg-light border rounded text-center p-2 mt-1">
         <h3>WITHDRAW</h3>
         <input type="text" name="acno1" formControlName="acno1" class="form-control mt-4" placeholder="Enter acno"
@@ -35,3 +37,12 @@
         <button type="submit" class="btn btn-primary mt-3 mb-3"> WITHDRAW</button>
     </div>
 </form>
+<div  class="text-end p-3">
+    <button  type="button" (click)="logout()" class="btn btn-danger "> LOGOUT</button>
+</div>
+
+<div class="text-end p-3">
+    <button (click)="deleteconfirm()" type="button" class="btn btn-success "> DELETE</button>
+</div>
+
+

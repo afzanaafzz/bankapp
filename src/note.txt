@@ -51,12 +51,16 @@ ng g s servicename
 
 Angular Directives
 ------------------
+used to manage DOM in angular
 
-1-structural Directives-to handle sturctured data in view  (html)
+1-structural Directives-to handle sturctured data in view of a component (html)
 
     -ngFor -    can directly apply in html to access elements from array
     -ngIf -     to apply if in html
 
+2.component directive
+
+3.Atribute directive
     
 Form Validation in Angular
 ---------------------------
@@ -99,3 +103,15 @@ access errors in validator rule
     store- localstorage.setItem()
     access-localstorage.getItem()
     delete-localstorage.removeItem()           
+
+   parent child components communication in angular 
+-------------------------------------------------------
+    
+
+
+
+     Date and Time in angular
+   ---------------------------
+Date - class
+create an object of class date tO acess date and time
+

@@ -56,7 +56,6 @@ export class LoginComponent {
 
 
 
-
   acnoChange(event: any) {
 
 
@@ -80,3 +79,4 @@ export class LoginComponent {
 
 
 }
+
